@@ -40,7 +40,7 @@ namespace :s3_direct_upload do
             puts %Q{Deleted file with key: "#{file.key}"}
           end
           # Increment the global synchronized counter.
-          semaphore.synchronize {total_deleted += 1}
+          semaphore.synchronize { total_deleted += 1 }
         end
       end
     end
